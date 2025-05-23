@@ -4,7 +4,7 @@ Als Basis für die Übungen steht das Dataset [sample_data.sql](sample_data.sql)
 
 ## Select
 
-1. Zeige alle Lieferanten ("suppliers") mit Name und Land
+1. Zeige alle Lieferanten ('suppliers') mit Name und Land
 2. Zeige alle Länder aller Lieferanten der Datenbank
 3. Zeige nur den Namen und das Herkunftsland aller Kunden
 
@@ -34,31 +34,31 @@ FROM Customers
 ```sql
 SELECT *
 FROM Customers
-WHERE Country = "Germany" AND City = "Berlin"
+WHERE Country = 'Germany' AND City = 'Berlin'
 ```
 
 ```sql
 SELECT *
 FROM Customers
-WHERE City = "München" OR City = "Berlin"
+WHERE City = 'München' OR City = 'Berlin'
 ```
 
 ```sql
 SELECT *
 FROM Customers
-WHERE NOT Country = "Germany"
+WHERE NOT Country = 'Germany'
 ```
 
 ```sql
 SELECT *
 FROM Customers
-WHERE Country = "Austria"
+WHERE Country = 'Austria'
 ```
 
 ```sql
 SELECT *
 FROM Suppliers
-WHERE Country = "USA"
+WHERE Country = 'USA'
 ```
 
 ## Order By
@@ -89,7 +89,7 @@ ORDER BY PostalCode
 ```sql
 SELECT *
 FROM Customers
-WHERE NOT Country = "Mexico"
+WHERE NOT Country = 'Mexico'
 ORDER BY Country
 ```
 
@@ -156,7 +156,7 @@ FROM Products
 ```sql
 SELECT COUNT(CustomerID)
 FROM Customers
-WHERE Country = "Austria"
+WHERE Country = 'Austria'
 ```
 
 ## Group By

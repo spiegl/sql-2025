@@ -5,11 +5,11 @@ Als Basis für die Übungen steht das Dataset [sample_data.sql](../sample_data.s
 ## Zusammenfassende Übungen
 
 1. Zeige alle Produkte samt Namen des Lieferanten mittels sub query.
-2. Zeige die Namen aller Kunden, die mit "K" beginnen.
+2. Zeige die Namen aller Kunden, die mit 'K' beginnen.
 3. Zeige alle Kunden aus Wien, London und Berlin.
 4. Zeige alle Produkte mit einem Preis zwischen 45 und 54 Euro.
 5. Füge einen neuen Kunde hinzu (Moritz Moser aus 6020 Innsbruck, Maximilianstraße 15).
-6. Der Ansprechpartner von Kunde Nummer 6 hat sich zu "Johanna Meister" geändert.
+6. Der Ansprechpartner von Kunde Nummer 6 hat sich zu 'Johanna Meister' geändert.
 7. Kunde Nummer 50 möchte aufgrund seiner Rechte der DSGVO aus unserer Datenbank gelöscht werden.
 
 ```sql
@@ -30,19 +30,19 @@ INNER JOIN Suppliers on Products.SupplierID = Products.SupplierID;
 ```sql
 SELECT *
 FROM Customers
-WHERE Customers.CustomerName LIKE "K%"
+WHERE Customers.CustomerName LIKE 'K%'
 ```
 
 ```sql
 # mit IN
 SELECT *
 FROM Customers
-WHERE Customers.City IN ("Vienna", "London", "Berlin");
+WHERE Customers.City IN ('Vienna', 'London', 'Berlin');
 
 # mit OR
 SELECT *
 FROM Customers
-WHERE Customers.City = "London" OR Customers.City = "Berlin" OR Customers.City = "Vienna";
+WHERE Customers.City = 'London' OR Customers.City = 'Berlin' OR Customers.City = 'Vienna';
 ```
 
 ```sql
@@ -59,19 +59,19 @@ WHERE Price > 45 AND Price < 54;
 
 ```sql
 INSERT INTO Customers (CustomerName, Address, City, PostalCode)
-VALUES ("Moritz Moser", "Maximilianstraße 15", "Innsbruck", "6020");
+VALUES ('Moritz Moser', 'Maximilianstraße 15', 'Innsbruck', '6020');
 
 # oder mit SET
 INSERT INTO Customers
-SET CustomerName = "Janine Moser",
-    Address = "Maximilianstraße 15",
-    City = "Innsbruck",
-    PostalCode = "6020";
+SET CustomerName = 'Janine Moser',
+    Address = 'Maximilianstraße 15',
+    City = 'Innsbruck',
+    PostalCode = '6020';
 ```
 
 ```sql
 UPDATE Customers
-SET Customers.ContactName = "Johanna Meister"
+SET Customers.ContactName = 'Johanna Meister'
 WHERE Customers.CustomerID = 6
 ```
 
@@ -98,7 +98,7 @@ WHERE Order_details.OrderID IN (
     WHERE Orders.CustomerID IN (
         SELECT Customers.CustomerID
         FROM Customers
-        WHERE Customers.Country IN ("USA", "Canada", "Mexico")
+        WHERE Customers.Country IN ('USA', 'Canada', 'Mexico')
     )
 );
 
@@ -107,9 +107,9 @@ DELETE FROM Orders
 WHERE Orders.CustomerID IN (
     SELECT Customers.CustomerID
     FROM Customers
-    WHERE Customers.Country IN ("USA", "Canada", "Mexico")
+    WHERE Customers.Country IN ('USA', 'Canada', 'Mexico')
 );
 
 DELETE FROM Customers
-WHERE Customers.Country IN ("USA", "Canada", "Mexico");
+WHERE Customers.Country IN ('USA', 'Canada', 'Mexico');
 ```

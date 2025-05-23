@@ -8,14 +8,14 @@ Als Basis für die Übungen steht das Dataset [sample_data.sql](../sample_data.s
 2. Zeige alle Städte der Tabelle Kunden, aufsteigend sortiert.
 3. Zeige alle Produkte mit einen höherem Preis als 100, sortiert nach Produktname mit den Attributen Name, Einheit und Preis.
 4. Zeige alle Kategorien und zugehörige Produkte an, geordnet nach Kategoriename und dann nach Produktname (nur Name der Kategorie und Name des- Produktes)
-5. Zeige alle Lieferdienste ("Shippers") mit der Anzahl der versendeten Bestellungen
+5. Zeige alle Lieferdienste ('Shippers') mit der Anzahl der versendeten Bestellungen
 6. Wie viele Lieferanten gibt es?
 7. Zeige die Anzahl der Lieferanten, gruppiert nach Land, absteigend sortiert nach Ländername.
 
 ```sql
 SELECT SupplierName, ContactName, Address, City, Country
 FROM Suppliers
-WHERE Country = "Japan"
+WHERE Country = 'Japan'
 ```
 
 ```sql
