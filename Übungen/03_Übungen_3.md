@@ -19,7 +19,7 @@ Als Basis für die Übungen steht das Dataset [sample_data.sql](../sample_data.s
 ## INSERT
 
 - Füge einen Lieferanten hinzu (Heinz Müller vom Unternehmen A-Z Transporte, aus 1110 Wien Ailecgasse 15).
-- Füge einen Mitarbeiter hinzu (Franz Xaver, geb. am 45.08.1976 mit der Notiz "Programmierer").
+- Füge einen Mitarbeiter hinzu (Franz Xaver, geb. am 15.08.1976 mit der Notiz "Programmierer").
 - Für eine Bestellung mit mindestens 2 Produkten hinzu. Achte dabei darauf, dass mehrere Tabellen befüllt werden müssen.
 
 ## UPDATE
